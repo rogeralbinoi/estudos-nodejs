@@ -14,7 +14,7 @@ function handle(request, response) {
     response.write('<!DOCTYPE html>');
     response.write('<h1> Hello HTML </h1>');
 
-    response.end('Hello from http module');
+    response.end();
 }
 
 var server = http.createServer(handle);
