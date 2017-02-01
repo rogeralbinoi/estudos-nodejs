@@ -6,6 +6,16 @@
 const http = require('http');
 const port = 3000;
 const handle = require('./handle');
+const events = require('events');
+const emiter = new events.EventEmitter();
+
+function say () {
+    console.log('Aeeee!!');
+}
+emiter.on('say', say);
+
+emiter.emit('say');
+
 
 var server = http.createServer(handle);
 
